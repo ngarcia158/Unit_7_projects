@@ -6,7 +6,7 @@
    Case Problem 3
    
    Author:Nicholas Garcia   
-   Date:11/1/19      
+   Date:11/1/19       
    
    Filename: cw_styles.css
 
@@ -34,103 +34,89 @@ nav#bottom{
    justify-content: center;
    -webkit-justify-content:center;
 }
-#bottom ul{
-   flex-grow: 150px;
-   flex-shrink: 150px;
+nav#bottom ul{
+  flex: 0 1 150px;
 }
+
 
 
 /* ===============================
 	Mobile Styles up to 480 pixels
    ===============================
 */
-	@media only screen and (max-width: 480){
+	@media only screen and (max-width: 480px){
       body{
          color: rgb(211, 211, 211);
-         background-color: rgb(51, 51, 51)
+         background-color: rgb(51, 51, 51);
       }
-      article, article img{
+      aside, article img, section#spotlight{
          display: none;
       }
-      nav ul{
+      nav#top ul{
          display: flex;
          display: -webkit-flex;
 
          flex-flow: row wrap;
          -webkit-flex-flow: row wrap;
 
+      }
+      nav#top ul li{
          font-size: 2.2em;
 
          flex: 1 1 130px;
          -webkit-flex: 1 1 130px;
       }
-      nav#top ul:nth-of-type(1){
-         background-image: url("cw_image01.png");
-         background: no-repeat;
-         background-size: fill;
-         background-position: center;
+      nav#top ul li:nth-of-type(1){
+         background: url(cw_image01.png) center/contain no-repeat;
 
       }
-      nav#top ul:nth-of-type(2){
-         background-image: url("cw_image02.png");
-         background: no-repeat;
-         background-size: fill;
-         background-position: center;
+      nav#top ul li:nth-of-type(2){
+         background-image: url(cw_image02.png) center/contain no-repeat;
+
 
       }
-      nav#top ul:nth-of-type(3){
-         background-image: url("cw_image03.png");
-         background: no-repeat;
-         background-size: fill;
-         background-position: center;
+      nav#top ul li:nth-of-type(3){
+         background-image: url(cw_image03.png) center/contain no-repeat;
+
+ 
 
       }
 
-      nav#top ul:nth-of-type(4){
-         background-image: url("cw_image04.png");
-         background: no-repeat;
-         background-size: fill;
-         background-position: center;
+      nav#top ul li:nth-of-type(4){
+         background-image: url(cw_image04.png) center/contain no-repeat;
+
+  
 
       }
-      nav#top ul:nth-of-type(5){
-         background-image: url("cw_image05.png");
-         background: no-repeat;
-         background-size: fill;
-         background-position: center;
+      nav#top ul li:nth-of-type(5){
+         background-image: url(cw_image05.png) center/contain no-repeat;
+ 
+
 
       }
-      nav#top ul:nth-of-type(5){
-         background-image: url("cw_image05.png");
-         background: no-repeat;
-         background-size: fill;
-         background-position: center;
+ 
+      nav#top ul li:nth-of-type(6){
+         background-image: url( cw_image06.png)  center/contain no-repeat;
+
+
 
       }
-      nav#top ul:nth-of-type(6){
-         background-image: url("cw_image06.png");
-         background: no-repeat;
-         background-size: fill;
-         background-position: center;
 
-      }
-      nav#top ul:nth-of-type(7){
-         background-image: url("cw_image07.png");
-         background: no-repeat;
-         background-size: fill;
-         background-position: center;
-
-      }
-      p{
+      p#links{
+         -webkit-display: flex;
+         display: flex;
          flex-flow: row nowrap;
          -webkit-flex-flow: row nowrap;
-
          justify-content: space-around;
       }
-      a{
+      p#links a{
          background-color: rgb(220, 27,27);
          color: white;
+
          text-decoration: none;
+
+         border-radius: 20px;
+         padding: 10px;
       }
    }
 
@@ -140,4 +126,40 @@ nav#bottom{
 	Tablet and Desktop Devices: 481px or more 
    ============================================
 */
+@media only screen and (min-width: 481px){
+   body{
+      display: flex;
+      display: -webkit-flex;
+   
+      flex-flow: row wrap;
+      -webkit-flex-flow: row wrap;
+   }
+   article{
+      flex: 2 1 400px;
+      -webkit-flex: 2 1 400px;
+   }
+   aside{
+      flex:1 2 200px;
+      -webkit-flex:1 2 200px;
+   }
+}
+nav#top ul{
+   display: flex;
+   display: -webkit-flex;
 
+   flex-flow: row nowrap;
+   -webkit-flex-flow: row nowrap;
+
+   background-color: rgb(51, 51, 51);
+
+   height: 50px;
+   justify-content: center;
+   align-content: center;
+   
+}
+nav#top li{
+   flex: 0 2 80px;
+}
+p a{
+   display: none;
+}
