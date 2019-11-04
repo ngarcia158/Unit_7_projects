@@ -30,6 +30,7 @@ nav#bottom{
 
   -webkit-flex-flow: row nowrap;
   flex-flow: row nowrap;
+  
   -webkit-justify-content: center;
   justify-content: center;
 }
